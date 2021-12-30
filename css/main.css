@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #bd0224;
+    --secondary-color: #8f031c;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .main-movies-section {
+        flex-flow: row wrap !important;
+        text-align: center !important;
+    }
+
+    aside {
+        min-width: 100vw;
+        margin-bottom: 0px !important;
+    }
+    .details{
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center;
+    }
+    .details img{
+        width: 300px !important;
+    }
+    .details iframe{
+        width: 300px !important;
+    }
+}
+
+/* 
+==========================
+HEADER SECTION STYLING
+==========================
+*/
+
+/* Social Icons Styling */
+header .social-icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+
+header .social-icons li {
+    list-style-type: none;
+    padding: 0px 10px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+header .social-icons li i {
+    font-size: 30px;
+    color: white;
+}
+
+/* Title Styling */
+header .title {
+    padding: 40px 0px;
+    background-color: #222222;
+    text-align: center;
+}
+
+header .title h1 {
+    color: var(--primary-color);
+    font-size: 2.2em;
+}
+
+header .title p {
+    color: white;
+}
+
+/* Main NavBar Styling */
+.main-nav {
+    background-color: var(--primary-color);
+}
+
+.main-nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav ul li {
+    padding: 15px;
+    list-style-type: none;
+
+}
+
+ul a {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main-nav ul li:hover {
+    background-color: var(--secondary-color);
+    border-bottom: 6px solid #222222;
+}
+
+li.active {
+    background-color: var(--secondary-color);
+    border-bottom: 6px solid #222222;
+}
+
+/* 
+======================
+ MAIN SECTION STYLING
+======================
+*/
+/* Slider Styling */
+.slider .container {
+    position: relative;
+}
+
+.slider .mySlides {
+    display: none;
+    background-color: #222222;
+}
+
+.slider .cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: var(--primary-color);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    outline: none;
+}
+
+.slider .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.slider .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 10px 16px;
+    color: white;
+}
+
+.slider .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.slider .column {
+    float: left;
+    width: 16.66%;
+}
+
+.slider .demo {
+    opacity: 0.6;
+}
+
+.slider .active,
+.slider .demo:hover {
+    opacity: 1;
+}
+
+/* 
+===========================
+    Latest release
+===========================
+*/
+.latest-release,
+.upcoming {
+    margin: 0px 30px;
+}
+
+.latest-release .section-header,
+.upcoming .section-header {
+    padding: 10px 0px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.latest-release .section-header h1,
+.upcoming .section-header h1 {
+    margin: 20px 80px;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary-color);
+}
+
+.thumbnail {
+    margin: 10px;
+    padding: 18px 12px;
+    box-shadow: 0 4px 8px 0 rgba(32, 24, 24, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.thumbnail .movie-title {
+    color: var(--primary-color);
+    font-size: 15px;
+    padding: 10px 0px;
+}
+
+.thumbnail .tags {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 6px;
+    margin: 20px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.thumbnail .info-btn {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+}
+
+.thumbnail .info-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.thumbnail img {
+    transform-origin: 50% 65%;
+    transition: transform 0.5s, filter 0.5s ease-in-out;
+    filter: brightness(150%);
+}
+
+.thumbnail:hover img {
+    filter: brightness(100%);
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+.thumbnail .rating {
+    float: right;
+    padding: 5px;
+}
+
+.thumbnail .rating i {
+    color: #F5C518;
+    margin: 0px 5px;
+}
+
+
+/*
+================================================
+           Brands Logo Slides Styling               
+================================================
+*/
+
+#brands-logos {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px 30px;
+    min-height: 30vh;
+}
+
+#brands-logos h2 {
+    color: rgb(117, 117, 117);
+}
+
+#brands-logos img {
+    width: 200px;
+    padding: 30px;
+
+}
+
+.MultiCarousel {
+    float: left;
+    overflow: hidden;
+    padding: 15px;
+    width: 100%;
+    position: relative;
+}
+
+.MultiCarousel .MultiCarousel-inner {
+    transition: 1s ease all;
+    float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item {
+    float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item>div {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
+    position: absolute;
+    top: calc(50% - 20px);
+}
+
+.MultiCarousel .leftLst {
+    left: 0;
+}
+
+.MultiCarousel .rightLst {
+    right: 0;
+}
+
+.MultiCarousel .leftLst.over,
+.MultiCarousel .rightLst.over {
+    pointer-events: none;
+    background: #ccc;
+}
+
+/* 
+==================================
+     CONTACT PAGE STYLING
+==================================
+*/
+
+.contact-heading {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/bg/contact.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+}
+
+.contact-heading h1 {
+    color: white;
+    font-size: 2.2em;
+}
+
+.main-contact-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    padding: 10px;
+}
+
+.main-contact-section #contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+}
+
+.main-contact-section #contact #form {
+    margin: 10px;
+}
+
+.main-contact-section #contact #form input {
+    margin: 10px;
+    padding: 10px;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    outline: none;
+    color: black;
+}
+
+.main-contact-section #contact #form textarea {
+    margin: 5px;
+    padding: 10px;
+    width: 90%;
+    color: black;
+    height: 80px;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    outline: none;
+}
+
+.main-contact-section #contact #form #button {
+    background: var(--primary-color);
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+}
+
+.main-contact-section #contact #form #button:hover {
+    background: var(--secondary-color);
+}
+
+.main-contact-section #contact #social {
+    margin: 10px;
+    display: inline-block;
+}
+
+.main-contact-section #contact #social ul li {
+    list-style: none;
+    text-align: center;
+}
+
+.main-contact-section #contact #social ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    padding: 15px 10px 15px 10px;
+    width: 400px;
+    margin: 30px;
+    display: block;
+}
+
+.main-contact-section iframe {
+    margin: 20px 0px;
+    width: 70vw !important;
+}
+
+/* 
+==================================
+     ABOUT PAGE STYLING
+==================================
+*/
+
+.about-heading {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/bg/about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+}
+
+.about-heading h1 {
+    color: white;
+    font-size: 2.2em;
+}
+
+.main-about-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.main-about-section .row {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.main-about-section .who-we-are h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.main-about-section .who-we-are p {
+    padding: 40px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/bg/about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 20px;
+    line-height: 40px;
+    color: white;
+    border-radius: 10px;
+}
+
+.main-about-section .our-mission {
+    padding: 10px;
+}
+
+.main-about-section .our-mission p {
+    font-size: 20px;
+    line-height: 40px;
+    border-radius: 10px;
+}
+
+.main-about-section .founded-on {
+    padding: 40px;
+    background-color: rgb(224, 224, 224);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.main-movies-section {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.main-movies-section .section-header {
+    color: white !important;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-position: center;
+}
+
+.main-movies-section .section-header h1 {
+    color: white !important;
+    font-size: 2.5em;
+}
+
+/*
+================================================
+           SIDE BAR Styling               
+================================================
+*/
+aside {
+    background-color: #222222;
+    color: white;
+    margin-bottom: -30px;
+}
+
+aside ul li {
+    list-style-type: none;
+    padding: 20px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+
+aside ul li:hover {
+    background-color: var(--primary-color);
+}
+
+.search-bar {
+    width: 100%;
+    text-align: center;
+    margin: 20px 10px;
+}
+
+.search-bar input {
+    padding: 10px 15px 10px 15px;
+    width: 80%;
+    margin: 0 auto;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+}
+
+.search-bar button {
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.search-bar button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 
+================================================
+            MOVIE PAGE STYLING
+================================================
+*/
+
+.details .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.story-line , .cast{
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+.details .row img {
+    height: 600px;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid grey;
+    background-color: ivory;
+}
+
+.details h1 {
+    color: var(--primary-color);
+    padding: 10px;
+}
+
+.details ul li {
+    list-style-type: none;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.details .trailer iframe {
+    width: 600px;
+}
+.review {
+    text-align: center;
+    padding: 10px;
+    margin:10px;
+}
+.review h2{
+    color:var(--primary-color);
+}
+.review textarea{
+    width: 70%;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    outline: 1px solid var(--primary-color);
+    border: none;
+}
+
+.review button{
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    color:white;
+    outline: none;
+    border: none;
+}
+.review button:hover{
+    background-color: var(--secondary-color);
+}
+.privacy_policy{
+    text-align: center;
+    padding: 20px;
+}
+.privacy_policy h1{
+    color:var(--primary-color);
+    padding:20px;
+}
+.privacy_policy p{
+    line-height: 30px;
+}
+/*
+================================================
+            Footer Section Styling               
+================================================
+*/
+footer {
+    background-color: #222222;
+    color: #bbb;
+    padding: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+footer>div {
+    min-width: 250px;
+    margin: 20px 10px;
+}
+
+footer p,
+footer li {
+    margin: 15px;
+    font-size: 14px;
+}
+
+footer .contact-info li {
+    list-style-type: none;
+}
+
+footer .contact-info span i {
+    width: 15px;
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+footer .contact-info ul li {
+    list-style: none;
+}
+
+footer .usefull-links a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .usefull-links a:hover {
+    color: var(--primary-color);
+}
+
+footer .connect-with-us ul li {
+    list-style-type: none;
+}
+
+footer .connect-with-us ul li a i {
+    font-size: 25px;
+    color: var(--primary-color);
+    float: left;
+    padding: 10px;
+}
+
+.footer-b {
+    height: 40px;
+    background-color: var(--primary-color);
+}
+
+.footer-b p {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
